@@ -1,0 +1,36 @@
+Bavaria 39 Cruiser
+==================
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 39 Cruiser
+  Slug:           bavaria-39-cruiser      << keep exactly this
+  Main photo:     UPLOAD the bavaria-39-cruiser.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2007
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 3 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Easy miles
+  Blurb:
+    A roomy deck-saloon feel below and an uncomplicated rig above. The 39 Cruiser is the yacht for crews who want to spend the day swimming and the evening in a taverna, with just enough sailing in between to feel like sailors.
+  Highlights:
+    - Generous, shaded cockpit
+    - Bright saloon and galley
+    - Undemanding to handle short-handed
+  Cabins:         3
+  Guests:         7
+  Berths:         6
+  Heads:          2
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

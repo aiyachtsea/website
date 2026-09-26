@@ -1,0 +1,36 @@
+Bavaria 51.1
+============
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 51.1
+  Slug:           bavaria-51-1      << keep exactly this
+  Main photo:     UPLOAD the bavaria-51-1.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2018
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 5 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Newest monohull
+  Blurb:
+    The most recent monohull in the fleet, with a modern hull shape that carries its beam aft — more space below, more stability on deck. Five cabins and twelve berths, in a yacht that still feels contemporary underway.
+  Highlights:
+    - Contemporary 2018 interior
+    - Twelve berths in five cabins
+    - Powerful, well-mannered under sail
+  Cabins:         5
+  Guests:         12
+  Berths:         12
+  Heads:          3
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

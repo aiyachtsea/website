@@ -1,0 +1,36 @@
+Bavaria 42 Cruiser
+==================
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 42 Cruiser
+  Slug:           bavaria-42-cruiser      << keep exactly this
+  Main photo:     UPLOAD the bavaria-42-cruiser.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2000
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 4 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Four cabins, honest value
+  Blurb:
+    A proven hull from a generation of Bavarias that simply keep going. Four cabins for eight guests at a price that leaves room in the budget for the tavernas — maintained by us to a standard that matters more than the model year.
+  Highlights:
+    - Four separate cabins
+    - Hard-wearing, well-sorted systems
+    - The value choice for eight
+  Cabins:         4
+  Guests:         8
+  Berths:         8
+  Heads:          2
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

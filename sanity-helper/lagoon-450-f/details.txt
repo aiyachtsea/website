@@ -1,0 +1,36 @@
+Lagoon 450 F
+============
+
+--- Tab: DETAILS ---
+  Name:           Lagoon 450 F
+  Slug:           lagoon-450-f      << keep exactly this
+  Main photo:     UPLOAD the lagoon-450-f.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Lagoon Catamarans
+  Model year:     2019
+  Type:           Catamaran      (radio: Monohull / Catamaran)
+  Category label: Catamaran
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Flybridge catamaran
+  Blurb:
+    The flybridge changes everything: you steer from above the cockpit, with the whole anchorage laid out in front of you. Four en-suite cabins, twelve berths and an aft deck made for long dinners at anchor.
+  Highlights:
+    - Flybridge helm and sunbed
+    - Four en-suite cabins
+    - The most space per guest in the fleet
+  Cabins:         4
+  Guests:         12
+  Berths:         12
+  Heads:          4
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

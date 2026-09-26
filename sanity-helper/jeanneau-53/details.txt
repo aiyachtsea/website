@@ -1,0 +1,36 @@
+Jeanneau 53
+===========
+
+--- Tab: DETAILS ---
+  Name:           Jeanneau 53
+  Slug:           jeanneau-53      << keep exactly this
+  Main photo:     UPLOAD the jeanneau-53.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Jeanneau
+  Model year:     2011
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 5 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Flagship monohull
+  Blurb:
+    Our largest monohull, and the one that turns heads on the quay. Five cabins, four heads and a saloon with real headroom — a yacht that feels closer to a small crewed vessel than a bareboat charter.
+  Highlights:
+    - Five cabins, four heads
+    - Saloon and galley on a grand scale
+    - Ideal with one of our skippers aboard
+  Cabins:         5
+  Guests:         10
+  Berths:         9
+  Heads:          4
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

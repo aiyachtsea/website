@@ -1,0 +1,10 @@
+# Studio build artefacts
+dist/
+.sanity/
+
+# Dependencies
+node_modules/
+
+# Local env
+.env*
+!.env.example

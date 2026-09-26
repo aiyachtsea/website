@@ -1,0 +1,36 @@
+Jeanneau Sun Odyssey 469
+========================
+
+--- Tab: DETAILS ---
+  Name:           Jeanneau Sun Odyssey 469
+  Slug:           jeanneau-sun-odyssey-469      << keep exactly this
+  Main photo:     UPLOAD the jeanneau-sun-odyssey-469.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Jeanneau
+  Model year:     2014
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 4 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Four en-suites
+  Blurb:
+    Twin wheels, a walk-through transom and a head for every cabin. The 469 is the yacht for four couples who want a genuine sailing boat without asking anyone to queue for the shower.
+  Highlights:
+    - Four cabins, four heads
+    - Twin helms and open transom
+    - Modern deck layout, easy sail handling
+  Cabins:         4
+  Guests:         9
+  Berths:         9
+  Heads:          4
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

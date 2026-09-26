@@ -1,0 +1,16 @@
+{
+  "name": "aiyachts-website",
+  "private": true,
+  "version": "1.0.0",
+  "description": "AIyachts static yacht-charter site — generated from Sanity by build/build.mjs",
+  "type": "module",
+  "scripts": {
+    "build": "node build/build.mjs",
+    "studio": "npm --prefix sanity run dev",
+    "studio:deploy": "npm --prefix sanity run deploy",
+    "studio:install": "npm --prefix sanity install"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

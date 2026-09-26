@@ -1,0 +1,36 @@
+Bavaria 33 Cruiser
+==================
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 33 Cruiser
+  Slug:           bavaria-33-cruiser      << keep exactly this
+  Main photo:     UPLOAD the bavaria-33-cruiser.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2007
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 2 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Couples & small families
+  Blurb:
+    The most compact yacht in the fleet and the easiest to fall in love with. Two cabins, a cockpit that seats everyone comfortably, and a sail plan that one confident sailor can manage alone — ideal for a couple, or a family finding its sea legs in the sheltered Ionian.
+  Highlights:
+    - Simple, forgiving sail plan
+    - Slips into the smallest bays
+    - Light on fuel and on the wallet
+  Cabins:         2
+  Guests:         6
+  Berths:         6
+  Heads:          1
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

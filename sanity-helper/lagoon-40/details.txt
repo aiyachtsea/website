@@ -1,0 +1,36 @@
+Lagoon 40
+=========
+
+--- Tab: DETAILS ---
+  Name:           Lagoon 40
+  Slug:           lagoon-40      << keep exactly this
+  Main photo:     UPLOAD the lagoon-40.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Lagoon Catamarans
+  Model year:     2022
+  Type:           Catamaran      (radio: Monohull / Catamaran)
+  Category label: Catamaran
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Newest yacht in the fleet
+  Blurb:
+    A 2022 catamaran, and the boat guests ask for by name. No heeling, a flat trampoline for the afternoons, a cockpit and saloon on one level, and a head for every cabin. Sailing made effortless for people who came for the swimming.
+  Highlights:
+    - Level sailing — no heel
+    - Four cabins, four heads
+    - Shallow draft for close-in anchoring
+  Cabins:         4
+  Guests:         10
+  Berths:         10
+  Heads:          4
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

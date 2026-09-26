@@ -1,0 +1,36 @@
+Beneteau Oceanis 50 Family
+==========================
+
+--- Tab: DETAILS ---
+  Name:           Beneteau Oceanis 50 Family
+  Slug:           beneteau-oceanis-50-family      << keep exactly this
+  Main photo:     UPLOAD the beneteau-oceanis-50-family.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Beneteau
+  Model year:     2010
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 5 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Big groups
+  Blurb:
+    Purpose-built for large crews: five cabins plus a skipper cabin, three heads, and deck space that keeps twelve people from ever feeling crowded. The obvious choice for a milestone birthday or a company week afloat.
+  Highlights:
+    - 5 + 1 cabins for twelve guests
+    - Three heads and generous stowage
+    - Wide side decks and a vast cockpit
+  Cabins:         5
+  Guests:         12
+  Berths:         12
+  Heads:          3
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

@@ -1,0 +1,36 @@
+Bavaria 46 Cruiser
+==================
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 46 Cruiser
+  Slug:           bavaria-46-cruiser      << keep exactly this
+  Main photo:     UPLOAD the bavaria-46-cruiser.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2010
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 4 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Volume for ten
+  Blurb:
+    Enormous interior volume for its length, and a cockpit that comfortably seats ten around the table. The 46 is our answer for two families sailing together who refuse to compromise on personal space.
+  Highlights:
+    - Ten berths in four cabins
+    - Huge cockpit and bathing platform
+    - Steady in the afternoon breeze
+  Cabins:         4
+  Guests:         10
+  Berths:         10
+  Heads:          2
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+
