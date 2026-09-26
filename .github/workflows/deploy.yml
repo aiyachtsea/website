@@ -1,0 +1,54 @@
+name: Build & deploy site
+
+# Rebuilds the static site from Sanity and commits the result back to the
+# branch that triggered the run. GitHub Pages (Source: Deploy from a branch)
+# then serves whichever branch it is configured for.
+#
+# Triggers:
+#   - repository_dispatch "sanity-publish": fired by the Sanity webhook on publish
+#     (runs on the default branch, main)
+#   - workflow_dispatch: manual "Run workflow" button (pick any branch to test)
+#
+# Does NOT trigger on push, so committing the generated output here can't loop.
+
+on:
+  repository_dispatch:
+    types: [sanity-publish]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-deploy-${{ github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Build site from Sanity
+        env:
+          USE_SANITY: 'true'
+        run: npm run build
+
+      - name: Commit regenerated site
+        run: |
+          git config user.name  "aiyachts-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "No changes to publish."
+          else
+            git commit -m "chore: rebuild site from Sanity [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
+
