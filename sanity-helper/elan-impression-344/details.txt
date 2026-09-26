@@ -1,0 +1,36 @@
+Elan Impression 344
+===================
+
+--- Tab: DETAILS ---
+  Name:           Elan Impression 344
+  Slug:           elan-impression-344      << keep exactly this
+  Main photo:     UPLOAD the elan-impression-344.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Elan Yachts
+  Model year:     2006
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 3 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Nimble & shallow
+  Blurb:
+    Small, agile and easy to place — the 344 gets into the coves that bigger yachts have to admire from the entrance. A good choice for six who value anchorages over cabin space.
+  Highlights:
+    - Manoeuvres beautifully under power
+    - Reaches shallow, quiet bays
+    - Simple systems, few surprises
+  Cabins:         3
+  Guests:         6
+  Berths:         6
+  Heads:          1
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

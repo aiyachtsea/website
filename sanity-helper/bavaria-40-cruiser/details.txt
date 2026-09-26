@@ -1,0 +1,36 @@
+Bavaria 40 Cruiser
+==================
+
+--- Tab: DETAILS ---
+  Name:           Bavaria 40 Cruiser
+  Slug:           bavaria-40-cruiser      << keep exactly this
+  Main photo:     UPLOAD the bavaria-40-cruiser.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Bavaria Yachts
+  Model year:     2011
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 3 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      The all-rounder
+  Blurb:
+    Three cabins, two heads and a wide, stable hull — the yacht we recommend most often to groups of six or seven. Steady enough for a first bareboat week, lively enough to keep experienced sailors interested when the afternoon breeze fills in.
+  Highlights:
+    - Three private cabins
+    - Two heads for a full crew
+    - Confidence-inspiring in a fresh breeze
+  Cabins:         3
+  Guests:         7
+  Berths:         7
+  Heads:          2
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

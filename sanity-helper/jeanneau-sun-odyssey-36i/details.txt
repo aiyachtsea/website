@@ -1,0 +1,36 @@
+Jeanneau Sun Odyssey 36i
+========================
+
+--- Tab: DETAILS ---
+  Name:           Jeanneau Sun Odyssey 36i
+  Slug:           jeanneau-sun-odyssey-36i      << keep exactly this
+  Main photo:     UPLOAD the jeanneau-sun-odyssey-36i.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Jeanneau
+  Model year:     2007
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 3 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      For the helmsman
+  Blurb:
+    The liveliest boat we keep. The Sun Odyssey 36i rewards a sailor who trims — light on the helm, quick to accelerate, and happiest on a reach between the islands. Three cabins keep it practical for six.
+  Highlights:
+    - Responsive, well-balanced helm
+    - Slippery in light Ionian mornings
+    - Compact enough for tight quays
+  Cabins:         3
+  Guests:         6
+  Berths:         6
+  Heads:          1
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

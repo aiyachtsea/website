@@ -2,9 +2,15 @@ import { SITE, NAV, FLEET, GALLERY, GALLERY_FILTERS, TEAM } from './site.mjs';
 import { LQIP } from './lqip.mjs';
 
 export const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-export const abs = p => SITE.origin + '/' + String(p).replace(/^\//,'');
+export const abs = p => /^https?:\/\//.test(p) ? p : SITE.origin + '/' + String(p).replace(/^\//,'');
 /* relative prefix for a page that lives `depth` folders deep */
 export const up = depth => '../'.repeat(depth || 0);
+
+/* Yacht card/hero image: uploaded Sanity image (CDN, sized) when present,
+   else the local repo file keyed by slug. */
+const cdnImg = (url, w, h) => `${url}?w=${w}&h=${h}&fit=crop&auto=format`;
+export const yachtImg = (y, r, w, h) => y.image ? cdnImg(y.image, w, h) : `${r}assets/fleet/${y.slug}.jpg`;
+export const yachtImgAbs = (y, w, h) => y.image ? cdnImg(y.image, w, h) : abs(`assets/fleet/${y.slug}.jpg`);
 
 /* ---------------------------------------------------------- HEAD */
 export function head(page){
@@ -164,8 +170,12 @@ export function footer(page){
       </div>
       <div class="foot-col">
         <h2 class="foot-h">Popular yachts</h2>
-        ${['lagoon-40','lagoon-450-f','bavaria-51-1','jeanneau-sun-odyssey-469','beneteau-oceanis-50-family']
-          .map(s => { const y = FLEET.find(f=>f.slug===s); return `<a href="${r}fleet/${s}.html">${esc(y.name)}</a>`; }).join('\n        ')}
+        ${(() => {
+          const preferred = ['lagoon-40','lagoon-450-f','bavaria-51-1','jeanneau-sun-odyssey-469','beneteau-oceanis-50-family']
+            .map(s => FLEET.find(f => f.slug === s)).filter(Boolean);
+          return (preferred.length ? preferred : FLEET).slice(0, 5)
+            .map(y => `<a href="${r}fleet/${y.slug}.html">${esc(y.name)}</a>`).join('\n        ');
+        })()}
       </div>
     </nav>
 
@@ -186,7 +196,7 @@ export function fleetCards(list, depth, {scroller=false} = {}){
   return list.map(y => `<article class="yacht-card">
       <a class="yacht-link" href="${r}fleet/${y.slug}.html">
         <div class="yacht-art">
-          <img src="${r}assets/fleet/${y.slug}.jpg" alt="${esc(y.name)} — ${esc(y.cat.toLowerCase())} sailing yacht for charter in Greece" width="640" height="380" loading="lazy" decoding="async">
+          <img src="${yachtImg(y, r, 640, 380)}" alt="${esc(y.name)} — ${esc(y.cat.toLowerCase())} sailing yacht for charter in Greece" width="640" height="380" loading="lazy" decoding="async">
           <span class="yacht-flag">${esc(y.type)}</span>
         </div>
         <div class="yacht-body">
@@ -416,7 +426,7 @@ export function listingCards(items, depth, {kind = 'sale'} = {}){
     const y = it.slug ? FLEET.find(f => f.slug === it.slug) : null;
     const name = it.name || (y && y.name) || '';
     const photo = it.photo || (y ? `assets/fleet/${y.slug}` : null);
-    const src = it.photo ? `${r}${it.photo}-800.jpg` : (y ? `${r}assets/fleet/${y.slug}.jpg` : '');
+    const src = it.photo ? `${r}${it.photo}-800.jpg` : (y ? yachtImg(y, r, 640, 380) : '');
     const cabins = it.cabins || (y && y.cabins);
     const guests = it.guests || (y && y.guests);
     const heads  = it.heads  || (y && y.heads);

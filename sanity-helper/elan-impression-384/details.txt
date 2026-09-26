@@ -1,0 +1,36 @@
+Elan Impression 384
+===================
+
+--- Tab: DETAILS ---
+  Name:           Elan Impression 384
+  Slug:           elan-impression-384      << keep exactly this
+  Main photo:     UPLOAD the elan-impression-384.jpg in this folder (drag it into the "Main photo" field)
+  Builder:        Elan Yachts
+  Model year:     2009
+  Type:           Monohull      (radio: Monohull / Catamaran)
+  Category label: 3 Cabins
+  Ownership:      Partner's yacht   (value: partner)
+  Short tag:      Performance cruiser
+  Blurb:
+    Slovenian-built and noticeably better finished than most charter yachts of its era. The Impression 384 combines a performance-oriented hull with a genuine cruising interior — three cabins, two heads, and a cockpit built for long lunches.
+  Highlights:
+    - Two heads across three cabins
+    - Sails well off the wind
+    - Solid, well-detailed build
+  Cabins:         3
+  Guests:         6
+  Berths:         6
+  Heads:          2
+
+--- Tab: SPECIFICATIONS ---
+  Technical specification:  (none on the old site — leave blank)
+  Equipment groups:         (none on the old site — leave blank)
+
+--- Tab: PHOTOS ---
+  Gallery photos (extra interior/exterior shots, optional):
+    (none on the old site — leave blank)
+
+--- Tab: WEBSITE ---
+  Show on website:ON
+  Sort order:     (leave blank)
+

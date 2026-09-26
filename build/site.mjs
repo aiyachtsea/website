@@ -3,6 +3,7 @@
    Change ORIGIN here and re-run `node build/build.mjs` to update
    every canonical URL, og:url and sitemap entry at once.
    ============================================================ */
+import { loadFleet } from './sanity.mjs';
 
 export const SITE = {
   origin: 'https://ai-yachting.com',
@@ -81,7 +82,7 @@ export const TEAM = [
                 }
    Optional extra specs, shown in the table only when present:
    loa, beam, draft, displacement, engine, fuel, water, mainsail, headsail. */
-export const FLEET = [
+const STATIC_FLEET = [
   {
     slug: 'bavaria-33-cruiser', name: 'Bavaria 33 Cruiser', builder: 'Bavaria Yachts',
     year: '2007', cat: '2 Cabins', type: 'Monohull', cabins: 2, guests: 6, berths: 6, heads: 1,
@@ -195,6 +196,9 @@ export const FLEET = [
     owner: 'partner', photos: [], equipment: {}
   }
 ];
+
+/* Resolved fleet: Sanity when enabled in sanity.project.json, else STATIC_FLEET. */
+export const FLEET = await loadFleet(STATIC_FLEET);
 
 /* ---------------- GALLERY OF EXPERIENCES ----------------
    cat  — filter group

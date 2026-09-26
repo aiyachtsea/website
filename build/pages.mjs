@@ -1,5 +1,5 @@
 import { SITE, FLEET, GALLERY, GALLERY_TEASER, TEAM, FLEET_GROUPS, EXPERIENCE_TYPES, FOR_SALE, SPECIAL_OFFERS } from './site.mjs';
-import { fleetCards, galleryTiles, galleryFilters, lightbox, teamCards, yachtGallery, equipmentBlock, specTable, listingCards, emptyState, abs, esc } from './components.mjs';
+import { fleetCards, galleryTiles, galleryFilters, lightbox, teamCards, yachtGallery, equipmentBlock, specTable, listingCards, emptyState, abs, esc, yachtImg, yachtImgAbs } from './components.mjs';
 
 const enquire = (subject) =>
   `mailto:${SITE.email}?subject=${encodeURIComponent(subject)}`;
@@ -188,7 +188,10 @@ const home = {
     </div>
     <div class="wrap">
       <div class="fleet-grid reveal-stagger">
-        ${fleetCards(FLEET.filter(f => ['lagoon-40','lagoon-450-f','bavaria-51-1','jeanneau-sun-odyssey-469','beneteau-oceanis-50-family','bavaria-40-cruiser'].includes(f.slug)), 0)}
+        ${fleetCards((() => {
+          const picks = FLEET.filter(f => ['lagoon-40','lagoon-450-f','bavaria-51-1','jeanneau-sun-odyssey-469','beneteau-oceanis-50-family','bavaria-40-cruiser'].includes(f.slug));
+          return (picks.length ? picks : FLEET).slice(0, 6);
+        })(), 0)}
       </div>
       <div class="fleet-cta">
         <a href="${r}fleet.html" class="btn">View all 14 yachts <span class="arrow" aria-hidden="true">→</span></a>
@@ -605,7 +608,7 @@ const fleet = {
         ${boats.map(y => `<article class="yacht-card" data-cat="${fleetGroup(y)}">
       <a class="yacht-link" href="${r}fleet/${y.slug}.html">
         <div class="yacht-art">
-          <img src="${r}assets/fleet/${y.slug}.jpg" alt="${esc(y.name)} — ${esc(y.cat.toLowerCase())} charter yacht available with AIyachts in Greece" width="640" height="380" loading="lazy" decoding="async">
+          <img src="${yachtImg(y, r, 640, 380)}" alt="${esc(y.name)} — ${esc(y.cat.toLowerCase())} charter yacht available with AIyachts in Greece" width="640" height="380" loading="lazy" decoding="async">
           <span class="yacht-flag">${esc(y.type)}</span>
         </div>
         <div class="yacht-body">
@@ -1656,7 +1659,7 @@ const yachtPage = (y) => {
     slug: `fleet/${y.slug}.html`, depth: 1, nav: 'fleet.html', file: `fleet/${y.slug}.html`,
     title: `${y.name} Yacht Charter Greece | AIyachts`,
     description: `Charter the ${y.name} (${y.year}) in Greece — ${y.cabins} cabins, ${y.guests} guests, ${y.heads} ${y.heads>1?'heads':'head'}. Bareboat or skippered from our Lefkas and Athens bases.`,
-    ogImage: `assets/fleet/${y.slug}.jpg`,
+    ogImage: y.image ? `${y.image}?w=1200&h=630&fit=crop&auto=format` : `assets/fleet/${y.slug}.jpg`,
     ogType: 'product',
     crumbs: [{label:'Fleet', href:'fleet.html'}, {label:y.name, href:`fleet/${y.slug}.html`}],
     h1: y.name,
@@ -1664,7 +1667,7 @@ const yachtPage = (y) => {
       '@type':'Product', '@id': abs(`fleet/${y.slug}.html`) + '#yacht',
       name: y.name, brand: {'@type':'Brand', name: y.builder},
       category: y.type === 'Catamaran' ? 'Catamaran charter' : 'Sailing yacht charter',
-      image: abs(`assets/fleet/${y.slug}.jpg`),
+      image: yachtImgAbs(y, 1200, 630),
       description: y.blurb,
       productionDate: y.year,
       additionalProperty: [
@@ -1681,7 +1684,7 @@ const yachtPage = (y) => {
     <div class="wrap">
       <div class="yacht-hero-grid">
         <div class="yacht-hero-media reveal">
-          <img src="${r}assets/fleet/${y.slug}.jpg" alt="${esc(y.name)} ${esc(y.type.toLowerCase())} available for charter with AIyachts in Greece" width="1280" height="760" fetchpriority="high" decoding="async">
+          <img src="${yachtImg(y, r, 1280, 760)}" alt="${esc(y.name)} ${esc(y.type.toLowerCase())} available for charter with AIyachts in Greece" width="1280" height="760" fetchpriority="high" decoding="async">
           <span class="yacht-flag big">${esc(y.type)}</span>
         </div>
         <div class="yacht-hero-copy reveal">
