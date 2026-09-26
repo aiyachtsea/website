@@ -1,15 +1,16 @@
 name: Build & deploy site
 
-# Rebuilds the static site from Sanity and commits the result back to the
-# branch that triggered the run. GitHub Pages (Source: Deploy from a branch)
-# then serves whichever branch it is configured for.
+# Rebuilds the static site from Sanity and commits the result back to a target
+# branch. GitHub Pages (Deploy from a branch) then serves whichever branch it is
+# configured for.
 #
-# Triggers:
-#   - repository_dispatch "sanity-publish": fired by the Sanity webhook on publish
-#     (runs on the default branch, main)
-#   - workflow_dispatch: manual "Run workflow" button (pick any branch to test)
-#
-# Does NOT trigger on push, so committing the generated output here can't loop.
+# The workflow FILE must live on the default branch (main) for GitHub to run it
+# on repository_dispatch / the manual button. But it can build ANY branch:
+#   - repository_dispatch: builds github.event.client_payload.ref
+#       (Sanity webhook projection: { "event_type": "sanity-publish",
+#        "client_payload": { "ref": "feature/add-fleat" } })
+#   - workflow_dispatch: builds the branch you pick in the Run-workflow UI
+# Falls back to the default branch when no ref is supplied.
 
 on:
   repository_dispatch:
@@ -20,15 +21,21 @@ permissions:
   contents: write
 
 concurrency:
-  group: build-deploy-${{ github.ref_name }}
+  group: build-deploy-${{ github.event.client_payload.ref || github.ref_name }}
   cancel-in-progress: true
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Resolve target branch
+        id: target
+        run: echo "ref=${{ github.event.client_payload.ref || github.ref_name }}" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout target branch
         uses: actions/checkout@v4
+        with:
+          ref: ${{ steps.target.outputs.ref }}
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -49,6 +56,7 @@ jobs:
             echo "No changes to publish."
           else
             git commit -m "chore: rebuild site from Sanity [skip ci]"
-            git push origin HEAD:${{ github.ref_name }}
+            git push origin HEAD:${{ steps.target.outputs.ref }}
           fi
+
 
