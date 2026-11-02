@@ -69,9 +69,10 @@ export const TEAM = [
 
    owner      'partner' → listed under “Partners’ Yachts”
               'own'     → listed under “Our Fleet”
-   photos[]   the yacht’s own gallery. Each entry is
-              { slug, alt, cat:'exterior'|'interior' } and expects
+   photos[]   the yacht’s own gallery. Static entries use
+              { slug, alt, cat:'exterior'|'interior' } and expect
               assets/fleet/gallery/<slug>-800 and -1600 (.jpg + .webp).
+              Sanity entries can instead include an uploaded image URL.
               Leave empty and the page shows the main photograph only.
    equipment  optional equipment list, grouped exactly as the client’s
               example. Leave {} and the block is omitted. Shape:

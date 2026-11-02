@@ -45,7 +45,9 @@ Manage → **Members** → invite as **Editor**. Add the Studio URL to
 ## Content model
 
 One document type: **`yacht`** (see `schemaTypes/yacht.ts`). Its fields map 1:1
-to the `FLEET` shape consumed by `build/site.mjs`. The **main photo is uploaded**
-in the Studio (`mainImage`) and served from Sanity's CDN; **gallery frames stay
-as local repo files keyed by slug** (`assets/fleet/gallery/<slug>-800/1600.{jpg,webp}`),
-with `assets/fleet/<slug>.jpg` as the main-image fallback.
+to the `FLEET` shape consumed by `build/site.mjs`. The main photo (`mainImage`)
+and gallery photos (`Photos` → `Uploaded image`) can be uploaded in the Studio
+and are served from Sanity's CDN. For compatibility, gallery photos can also
+reference local repo files by slug
+(`assets/fleet/gallery/<slug>-800/1600.{jpg,webp}`); `assets/fleet/<slug>.jpg`
+remains the main-image fallback.

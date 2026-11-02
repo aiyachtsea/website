@@ -9,6 +9,7 @@ export const up = depth => '../'.repeat(depth || 0);
 /* Yacht card/hero image: uploaded Sanity image (CDN, sized) when present,
    else the local repo file keyed by slug. */
 const cdnImg = (url, w, h) => `${url}?w=${w}&h=${h}&fit=crop&auto=format`;
+const cdnPhoto = (url, w, format = 'auto') => `${url}?w=${w}&${format === 'auto' ? 'auto=format' : `fm=${format}`}`;
 export const yachtImg = (y, r, w, h) => y.image ? cdnImg(y.image, w, h) : `${r}assets/fleet/${y.slug}.jpg`;
 export const yachtImgAbs = (y, w, h) => y.image ? cdnImg(y.image, w, h) : abs(`assets/fleet/${y.slug}.jpg`);
 
@@ -363,15 +364,23 @@ export function yachtGallery(y, depth, folder){
   if(!photos.length){
     return `<p class="gallery-pending">Interior and exterior photographs of the ${esc(y.name)} are being added. Ask us and we will send the full set for the yacht and your dates.</p>`;
   }
-  const tiles = photos.map((ph, i) => `<figure class="xg-tile" style="--cs:2;--rs:3;--d:${(i*0.045).toFixed(3)}s;--lqip:none" data-cat="${esc(ph.cat || 'exterior')}" data-title="${esc(ph.title || y.name)}" data-alt="${esc(ph.alt)}" data-full="${r}${dir}/${ph.slug}-1600.jpg" data-full-webp="${r}${dir}/${ph.slug}-1600.webp"${i >= VISIBLE_FRAMES ? ' hidden' : ''}>
+  const tiles = photos.map((ph, i) => {
+    const full = ph.image ? cdnPhoto(ph.image, 1600) : `${r}${dir}/${ph.slug}-1600.jpg`;
+    const fullWebp = ph.image ? cdnPhoto(ph.image, 1600, 'webp') : `${r}${dir}/${ph.slug}-1600.webp`;
+    const localPhoto = (size, extension) => esc(`${r}${dir}/${ph.slug}-${size}.${extension}`);
+    const picture = ph.image
+      ? `<img src="${esc(cdnPhoto(ph.image, 800))}" srcset="${esc(cdnPhoto(ph.image, 800))} 800w, ${esc(cdnPhoto(ph.image, 1600))} 1600w" sizes="(max-width:700px) 50vw, 33vw" alt="${esc(ph.alt)}" width="1600" height="1200" loading="lazy" decoding="async">`
+      : `<picture>
+            <source type="image/webp" srcset="${localPhoto(800, 'webp')} 800w, ${localPhoto(1600, 'webp')} 1600w" sizes="(max-width:700px) 50vw, 33vw">
+            <img src="${localPhoto(800, 'jpg')}" alt="${esc(ph.alt)}" width="1600" height="1200" loading="lazy" decoding="async">
+          </picture>`;
+    return `<figure class="xg-tile" style="--cs:2;--rs:3;--d:${(i*0.045).toFixed(3)}s;--lqip:none" data-cat="${esc(ph.cat || 'exterior')}" data-title="${esc(ph.title || y.name)}" data-alt="${esc(ph.alt)}" data-full="${esc(full)}" data-full-webp="${esc(fullWebp)}"${i >= VISIBLE_FRAMES ? ' hidden' : ''}>
         <button class="xg-open" type="button" aria-label="Open: ${esc(ph.title || ph.alt)}">
           <span class="xg-frame" aria-hidden="true"></span>
-          <picture>
-            <source type="image/webp" srcset="${r}${dir}/${ph.slug}-800.webp 800w, ${r}${dir}/${ph.slug}-1600.webp 1600w" sizes="(max-width:700px) 50vw, 33vw">
-            <img src="${r}${dir}/${ph.slug}-800.jpg" alt="${esc(ph.alt)}" width="1600" height="1200" loading="lazy" decoding="async">
-          </picture>
+          ${picture}
         </button>
-      </figure>`).join('\n      ');
+      </figure>`;
+  }).join('\n      ');
   const more = photos.length > VISIBLE_FRAMES
     ? `<div class="gallery-more">
         <button type="button" class="btn ghost" data-gallery-more>More photographs <span class="gallery-more-n">(${photos.length - VISIBLE_FRAMES})</span> <span class="arrow" aria-hidden="true">→</span></button>

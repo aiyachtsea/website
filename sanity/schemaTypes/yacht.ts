@@ -136,7 +136,15 @@ export const yacht = defineType({
         type: 'object',
         name: 'photo',
         fields: [
-          defineField({ name: 'slug', title: 'Photo slug (file name, no extension)', type: 'string', validation: (r) => r.required() }),
+          defineField({
+            name: 'image', title: 'Uploaded image', type: 'image',
+            description: 'Upload the gallery photo to Sanity. Alternatively, use a local photo slug below.',
+            options: { hotspot: true }
+          }),
+          defineField({
+            name: 'slug', title: 'Photo slug (local file, optional)', type: 'string',
+            description: 'For a photo stored in the repository instead of uploaded to Sanity.'
+          }),
           defineField({ name: 'alt', title: 'Alt text', type: 'string', validation: (r) => r.required() }),
           defineField({
             name: 'cat', title: 'Category', type: 'string',
@@ -145,9 +153,17 @@ export const yacht = defineType({
           }),
           defineField({ name: 'title', title: 'Caption (optional)', type: 'string' })
         ],
+        validation: (r) => r.custom((value) => {
+          const photo = value as { image?: unknown; slug?: unknown } | undefined;
+          return photo?.image || photo?.slug ? true : 'Upload an image or enter a local photo slug.';
+        }),
         preview: {
-          select: { title: 'slug', subtitle: 'cat' },
-          prepare: ({ title, subtitle }) => ({ title, subtitle })
+          select: { title: 'title', slug: 'slug', subtitle: 'cat', media: 'image' },
+          prepare: ({ title, slug, subtitle, media }) => ({
+            title: title || slug || 'Gallery photo',
+            subtitle,
+            media
+          })
         }
       })]
     }),

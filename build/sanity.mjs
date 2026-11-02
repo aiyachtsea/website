@@ -43,7 +43,7 @@ const QUERY = `*[_type == "yacht" && showOnWebsite == true] | order(coalesce(ord
   owner,
   "image": mainImage.asset->url,
   specs,
-  photos[]{ "slug": slug, alt, cat, title },
+  photos[]{ "slug": slug, "image": image.asset->url, alt, cat, title },
   "equipment": equipment[]{ title, items }
 }`;
 
@@ -75,7 +75,7 @@ function toYacht(doc) {
     highlights: Array.isArray(doc.highlights) ? doc.highlights : [],
     owner: doc.owner || 'partner',
     image: doc.image,
-    photos: (doc.photos || []).filter((p) => p && p.slug && p.alt),
+    photos: (doc.photos || []).filter((p) => p && (p.image || p.slug) && p.alt),
     equipment,
     // Optional specs spread onto the yacht (site.mjs reads y.loa, y.beam, ...)
     ...(doc.specs || {})
